@@ -5,6 +5,7 @@ import {
   EnvironmentMap,
 } from "@react-three/drei";
 import React from "react";
+import Boxes from "./Boxes";
 import Car from "./Car";
 import Ground from "./Ground";
 import Rings from "./Rings";
@@ -25,6 +26,7 @@ function CarShow() {
         )}
       </CubeCamera>
       <Rings />
+      <Boxes />
       <spotLight
         color={[1, 0.25, 0.7]}
         intensity={1.5}
