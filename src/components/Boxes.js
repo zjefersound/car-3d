@@ -38,16 +38,15 @@ function Box({ color }) {
 
   useFrame(
     (state, delta) => {
-      // time.current += delta * 1.2;
-      // let newZ = position.z - time.current;
+      time.current += delta * 1.2;
+      let newZ = position.z - time.current;
 
-      // if (newZ < -10) {
-      //   resetPosition();
-      //   time.current = 0;
-      // }
+      if (newZ < -10) {
+        resetPosition();
+        time.current = 0;
+      }
 
-      // box.current.position.set(position.x, position.y, newZ);
-      box.current.position.set(position.x, position.y, position.z);
+      box.current.position.set(position.x, position.y, newZ);
       box.current.rotation.x += delta * xRotSpeed;
       box.current.rotation.y += delta * yRotSpeed;
     },
